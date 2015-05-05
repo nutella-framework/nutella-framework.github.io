@@ -6,7 +6,8 @@ $(document).ready(function(){
         jsonp: "callback",
         dataType: "jsonp",
         success: function( response ) {
-            $('#nutella_version').text(atob(response.data.content));
+            var s = response.data.contents
+            $('#nutella_version').text(atob(s.substring(0, s.length - 1)));
         }
     });
 });
