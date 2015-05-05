@@ -6,7 +6,7 @@ $(document).ready(function(){
         jsonp: "callback",
         dataType: "jsonp",
         success: function( response ) {
-            var s = response.data.contents
+            var s = response.data.content;
             $('#nutella_version').text(atob(s.substring(0, s.length - 1)));
         }
     });
